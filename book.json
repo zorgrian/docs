@@ -1,7 +1,10 @@
 {
+  "title": "Android JS",
+   "author": "Pankaj Devesh <pankajdevesh3@gmail.com>",
     "root": "./md",
-    "plugins": [ "variables" ],
+    "plugins": [ "variables", "related-links"],
   "pluginsConfig": {
+  	"daaaaataaaa":[],
     "variables": {
       "files": {
       	"package": "../package.json"

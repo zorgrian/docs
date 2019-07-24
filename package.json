@@ -7,7 +7,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "serve": "gitbook serve ./ ./docs/"
+    "serve": "gitbook serve ./ ./docs/",
+    "build": "gitbook build ./ ./docs/"
   },
   "keywords": [],
   "author": "",
