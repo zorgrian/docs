@@ -1,0 +1,11 @@
+{
+    "root": "./md",
+    "plugins": [ "variables" ],
+  "pluginsConfig": {
+    "variables": {
+      "files": {
+      	"package": "../package.json"
+      }
+    }
+  }
+}

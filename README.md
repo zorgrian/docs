@@ -1,2 +1,0 @@
-# docs
-Android JS docs
