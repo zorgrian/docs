@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Hotspot API · Android JS</title>
+        <title>Change Theme · Android JS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="camera_api.html" />
+    <link rel="next" href="change_theme.html" />
     
     
-    <link rel="prev" href="wifi_api.html" />
+    <link rel="prev" href="packaging_app.html" />
     
 
 
@@ -157,7 +157,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="change_theme.html">
+        <li class="chapter active" data-level="1.5" data-path="change_theme.html">
             
                 <a href="change_theme.html">
             
@@ -370,7 +370,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10" data-path="hotspot_api.html">
+        <li class="chapter " data-level="1.10" data-path="hotspot_api.html">
             
                 <a href="hotspot_api.html">
             
@@ -517,7 +517,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Hotspot API</a>
+        <a href="." >Change Theme</a>
     </h1>
 </div>
 
@@ -532,37 +532,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hotspot-api">Hotspot API</h1>
-<p><code>app.hotspot</code> is the instance of <code>Hotspot API</code>, which provide functions to access <code>Hotspot</code> from your app. In order to use this <code>API</code>, you need to add these <code>permissions</code> to you <code>package.json</code> file.</p>
-<pre><code class="lang-text">android.permission.ACCESS_WIFI_STATE
-android.permission.CHANGE_WIFI_STATE
-</code></pre>
-<p>A working example of <code>Hotspot API</code></p>
-<pre><code class="lang-js">app.hotspot.enable(<span class="hljs-string">&quot;hello&quot;</span>);
-<span class="hljs-built_in">console</span>.log(app.hotspot.isEnabled());
-</code></pre>
-<h3 id="methods">Methods</h3>
-<h4 id="apphotspotenablessid"><code>app.hotspot.enable(ssid)</code></h4>
+                                <h1 id="theme">Theme</h1>
+<p>In order to apply theme in your app, you need to define <code>theme</code> attribute in <code>package.json</code> file of your app.</p>
+<h4 id="full-screen"><code>Full Screen</code></h4>
+<p>In order to full screen your app, you need to define <code>fullScreen</code> attribute inside the <code>theme</code> attribute in <code>package.json</code> file of your app.</p>
 <ul>
-<li><code>ssid</code> String<ul>
-<li><code>ssid</code> name of the network, you want to create.</li>
+<li><code>fullScreen: true</code> to hide the status bar to make app full screen.</li>
+<li><code>fullScreen: false</code> to show status bar</li>
 </ul>
-</li>
-</ul>
-<p>Enables the <code>Hotspot</code> of <code>android device</code>.</p>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.hotspot.enable(<span class="hljs-string">&quot;hello&quot;</span>);
+<pre><code class="lang-json">{
+  ...
+  <span class="hljs-string">&quot;theme&quot;</span>: {
+    <span class="hljs-string">&quot;fullScreen&quot;</span>: <span class="hljs-literal">true</span>
+  }
+  ...
+}
 </code></pre>
-<h4 id="apphotspotdisable"><code>app.hotspot.disable()</code></h4>
-<p>Disables the <code>Hotspot</code> of <code>android device</code>, if already enable.</p>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.hotspot.disable();
+<h4 id="change-colors"><code>Change Colors</code></h4>
+<p>In order to change the <strong>colors</strong> , you&apos;ll have to define following attributes inside <code>theme</code> attribute in <code>package.json</code> file of your app</p>
+<pre><code class="lang-json">{
+  ...
+  <span class="hljs-string">&quot;theme&quot;</span>: {
+    <span class="hljs-string">&quot;fullScreen&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;colorAccent&quot;</span>: <span class="hljs-string">&quot;#FF0000&quot;</span>,
+    <span class="hljs-string">&quot;colorPrimary&quot;</span>: <span class="hljs-string">&quot;#00FF00&quot;</span>,
+    <span class="hljs-string">&quot;colorPrimaryDark&quot;</span>: <span class="hljs-string">&quot;#FFFFFF&quot;</span>
+  }
+  ...
+}
 </code></pre>
-<h4 id="apphotspotisenabled"><code>app.hotspot.isEnabled()</code></h4>
-<p>Returns <code>true</code> if <code>Hotspot</code> is <code>enable</code> otherwise <code>false</code>.</p>
-<p>An example of above code:</p>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(app.hotspot.isEnabled());
-</code></pre>
+<p><code>Note: change the colors according to you</code></p>
 
                                 
                                 </section>
@@ -590,12 +589,12 @@ android.permission.CHANGE_WIFI_STATE
 
             
                 
-                <a href="wifi_api.html" class="navigation navigation-prev " aria-label="Previous page: Wi-Fi API">
+                <a href="packaging_app.html" class="navigation navigation-prev " aria-label="Previous page: Packaging App">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="camera_api.html" class="navigation navigation-next " aria-label="Next page: Camera API">
+                <a href="change_theme.html#full-screen" class="navigation navigation-next " aria-label="Next page: Full screen">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -606,7 +605,7 @@ android.permission.CHANGE_WIFI_STATE
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Hotspot API","level":"1.10","depth":1,"next":{"title":"Camera API","level":"1.11","depth":1,"path":"camera_api.md","ref":"./camera_api.md","articles":[]},"previous":{"title":"Wi-Fi API","level":"1.9","depth":1,"path":"wifi_api.md","ref":"./wifi_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.1","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"hotspot_api.md","mtime":"2019-09-25T16:05:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-25T16:43:32.051Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Change Theme","level":"1.5","depth":1,"next":{"title":"Full screen","level":"1.5.1","depth":2,"anchor":"#full-screen","path":"change_theme.md","ref":"change_theme.md#full-screen","articles":[]},"previous":{"title":"Packaging App","level":"1.4","depth":1,"path":"packaging_app.md","ref":"./packaging_app.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.1","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"change_theme.md","mtime":"2019-09-25T16:33:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-25T16:43:32.051Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
