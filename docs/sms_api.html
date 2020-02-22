@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Camera API · Android JS</title>
+        <title>SMS API · Android JS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="microphone_api.html" />
+    <link rel="next" href="app.html" />
     
     
-    <link rel="prev" href="hotspot_api.html" />
+    <link rel="prev" href="deeplink_api.html" />
     
 
 
@@ -383,7 +383,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11" data-path="camera_api.html">
+        <li class="chapter " data-level="1.11" data-path="camera_api.html">
             
                 <a href="camera_api.html">
             
@@ -474,7 +474,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="sms_api.html">
+        <li class="chapter active" data-level="1.18" data-path="sms_api.html">
             
                 <a href="sms_api.html">
             
@@ -530,7 +530,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Camera API</a>
+        <a href="." >SMS API</a>
     </h1>
 </div>
 
@@ -545,125 +545,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="camera-api">Camera API</h1>
-<p>Camera API provide the various functions to interact with camera. In order to use this <code>API</code> you have to add this  <code>permission</code> to your <code>package.json</code> file.</p>
-<pre><code class="lang-text">android.permission.CAMERA
+                                <h1 id="sms-api">SMS API</h1>
+<p><code>app.sms</code> is the instance of <code>SMS API</code>, which provide function to <code>send sms</code> from your app.
+to use this <code>API</code> you need to this permission in your <code>package.json</code> file</p>
+<pre><code class="lang-text">android.permission.SEND_SMS
 </code></pre>
-<p>The following example shows how to <code>init camera</code> in your app</p>
-<pre><code class="lang-html">// In front process (web pages)
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-        // add androidjs.js to get the API&apos;s of `Android JS`.
-        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> = &quot;<span class="hljs-attr">.</span>/<span class="hljs-attr">assets</span>/<span class="hljs-attr">ipc</span>/<span class="hljs-attr">androidjs.js</span>&quot; &gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">id</span> = &quot;<span class="hljs-attr">camera</span>&quot; <span class="hljs-attr">autoplay</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-            app.camera.init(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;camera&apos;</span>), {video:<span class="hljs-literal">true</span>, audio: <span class="hljs-literal">false</span>});
-        }
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+<p>A working example of <code>SMS API</code></p>
+<pre><code class="lang-js">app.sms.send(<span class="hljs-string">&quot;123457890&quot;</span>, <span class="hljs-string">&quot;Hello this is from Android JS&quot;</span>);
 </code></pre>
 <h3 id="methods">Methods</h3>
-<h4 id="appcamerainitdom-options"><code>app.camera.init(dom, options)</code></h4>
+<h4 id="appsmssendnumber-message"><code>app.sms.send(number, message)</code></h4>
 <ul>
-<li><code>dom</code> is HTML dom, where you want to initialise camera.</li>
-<li><code>options</code> is a JavaScript object, which define services<ul>
-<li><code>video</code> it could be just <code>true/false</code> or an object <code>{deviceId: {exact: devices[0]}}</code></li>
-<li><code>audio</code> it could be just <code>true/false</code> or an object <code>{deviceId: {exact: devices[0]}}</code></li>
-</ul>
-</li>
+<li><code>number</code> String</li>
+<li><code>message</code> String</li>
 </ul>
 <p>An example of above code:</p>
-<pre><code class="lang-js">app.camera.init(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;camera&apos;</span>), {video: <span class="hljs-literal">true</span>, audio: <span class="hljs-literal">false</span>});
-</code></pre>
-<h4 id="appcameragetdevicescallback"><code>app.camera.getDevices(callback)</code></h4>
-<ul>
-<li><code>callback</code> Function<ul>
-<li><code>devices</code> is list of video devices</li>
-</ul>
-</li>
-</ul>
-<p>Starts gathering information about all available video devices, and calls <code>callback(devices)</code> when finished.</p>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.camera.getDevices(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">devices</span>)</span>{
-    <span class="hljs-built_in">console</span>.log(devices);
-})
-</code></pre>
-<h4 id="appcamerastartrecordingoptions"><code>app.camera.startRecording(options)</code></h4>
-<ul>
-<li><code>options</code> Object<ul>
-<li><code>mimeType</code> video type or codec (i.e. <code>video/webm;codecs=vp9</code>)</li>
-<li><code>bitsPerSecond</code> bitrate (i.e. <code>100000</code>)</li>
-</ul>
-</li>
-</ul>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.camera.startRecording({mimeType: <span class="hljs-string">&apos;video/webm;codecs=vp9&apos;</span>, bitsPerSecond: <span class="hljs-number">100000</span>});
-</code></pre>
-<h4 id="appcamerastoprecording"><code>app.camera.stopRecording()</code></h4>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.camera.stopRecording();
-</code></pre>
-<h4 id="appcamerasaverecordingfilepath-filename-options"><code>app.camera.saveRecording(filepath, filename, options)</code></h4>
-<ul>
-<li><code>filepath</code> where you want to store the recorded video (i.e. <code>/storage/emulated/0/</code>)</li>
-<li><code>filename</code> name of file</li>
-<li><code>options</code> Object<ul>
-<li><code>type</code> video type (i.e. <code>video/webm</code>)</li>
-</ul>
-</li>
-</ul>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.camera.saveRecording(<span class="hljs-string">&apos;/storage/emulated/0/&apos;</span>, <span class="hljs-string">&apos;newVideo1.webm&apos;</span>, {type:<span class="hljs-string">&apos;video/webm&apos;</span>})
-</code></pre>
-<h4 id="appcamerapreviewrecordingdom-options"><code>app.camera.previewRecording(dom, options)</code></h4>
-<ul>
-<li><code>dom</code> where you want to preview the recorded video</li>
-<li><code>options</code> Object<ul>
-<li><code>type</code> video type (i.e. <code>video/webm</code>)</li>
-</ul>
-</li>
-</ul>
-<p>An example of above code:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// &lt;video id = &quot;preview&quot; autoplay&gt;&lt;/video&gt;</span>
-app.camera.previewRecording(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;preview&apos;</span>), {type: <span class="hljs-string">&apos;video/webm&apos;</span>});
-</code></pre>
-<h4 id="appcameragetbufferoptions-callback"><code>app.camera.getBuffer(options, callback)</code></h4>
-<ul>
-<li><code>callback</code> Function<ul>
-<li><code>buffer</code></li>
-</ul>
-</li>
-<li><code>options</code> Object<ul>
-<li><code>type</code> video type (i.e. <code>video/webm</code>)</li>
-</ul>
-</li>
-</ul>
-<p>An example of above code:</p>
-<pre><code class="lang-js">app.camera.getBuffer({type: <span class="hljs-string">&apos;video/webm&apos;</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">buffer</span>)</span>{
-    ...
-});
-</code></pre>
-<h4 id="appcameratakephotocameradom-previewdom"><code>app.camera.takePhoto(cameraDom, previewDom)</code></h4>
-<ul>
-<li><code>cameraDom</code> dom where the camera is already initialised</li>
-<li><code>previewDom</code> it is optional, if you want to preview the captured image provide the dom for preview otherwise none</li>
-</ul>
-<p>An example of above code:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// &lt;img id = &quot;preview&quot; autoplay&gt;&lt;/img&gt;</span>
-app.camera.takePhoto(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;camera&apos;</span>), <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;preview&apos;</span>));
-</code></pre>
-<h4 id="appcamerasavephotofilepath-filename"><code>app.camera.savePhoto(filepath, filename)</code></h4>
-<ul>
-<li><code>filepath</code> where you want to store the captured photo (i.e. <code>/storage/emulated/0/</code>)</li>
-<li><code>filename</code> name of file</li>
-</ul>
-<p>An example of above code:</p>
-<pre><code class="lang-js"><span class="hljs-comment">// &lt;img id = &quot;preview&quot; autoplay&gt;&lt;/img&gt;</span>
-app.camera.savePhoto(<span class="hljs-string">&apos;/storage/emulated/0/&apos;</span>, <span class="hljs-string">&apos;test.webp&apos;</span>);
+<pre><code class="lang-js">app.sms.send(<span class="hljs-string">&quot;123457890&quot;</span>, <span class="hljs-string">&quot;Hello this is from Android JS&quot;</span>);
 </code></pre>
 
                                 
@@ -692,12 +589,12 @@ app.camera.savePhoto(<span class="hljs-string">&apos;/storage/emulated/0/&apos;<
 
             
                 
-                <a href="hotspot_api.html" class="navigation navigation-prev " aria-label="Previous page: Hotspot API">
+                <a href="deeplink_api.html" class="navigation navigation-prev " aria-label="Previous page: DeepLink API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="microphone_api.html" class="navigation navigation-next " aria-label="Next page: Microphone API">
+                <a href="app.html" class="navigation navigation-next " aria-label="Next page: App">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -708,7 +605,7 @@ app.camera.savePhoto(<span class="hljs-string">&apos;/storage/emulated/0/&apos;<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Camera API","level":"1.11","depth":1,"next":{"title":"Microphone API","level":"1.12","depth":1,"path":"microphone_api.md","ref":"./microphone_api.md","articles":[]},"previous":{"title":"Hotspot API","level":"1.10","depth":1,"path":"hotspot_api.md","ref":"./hotspot_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"camera_api.md","mtime":"2020-02-22T19:43:46.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T19:53:14.482Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SMS API","level":"1.18","depth":1,"next":{"title":"App","level":"1.19","depth":1,"path":"app.md","ref":"./app.md","articles":[]},"previous":{"title":"DeepLink API","level":"1.17","depth":1,"path":"deeplink_api.md","ref":"./deeplink_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"sms_api.md","mtime":"2020-02-22T19:47:44.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T19:53:14.482Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

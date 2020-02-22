@@ -34,4 +34,5 @@
 - [Call API](./call_api.md)
 - [Contact API](./contact_api.md)
 - [DeepLink API](./deeplink_api.md)
+- [SMS API](sms_api.md)
 - [App](./app.md)
