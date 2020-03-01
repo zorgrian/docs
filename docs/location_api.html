@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Installation · Android JS</title>
+        <title>Location API · Android JS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="generating_project.html" />
+    <link rel="next" href="app.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="sms_api.html" />
     
 
 
@@ -118,7 +118,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="installation.html">
+        <li class="chapter " data-level="1.2" data-path="installation.html">
             
                 <a href="installation.html">
             
@@ -487,7 +487,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="location_api.html">
+        <li class="chapter active" data-level="1.19" data-path="location_api.html">
             
                 <a href="location_api.html">
             
@@ -543,7 +543,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Installation</a>
+        <a href="." >Location API</a>
     </h1>
 </div>
 
@@ -558,12 +558,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="installation">Installation</h1>
-<p>To install prebuilt Electron binaries, use <code>npm</code>.</p>
-<pre><code class="lang-sh">npm install androidjs
+                                <h1 id="location-api">Location API</h1>
+<p><code>app.location</code> is the instance of <code>Location API</code>, which provide function to get <code>latitude</code> and <code>longitude</code> of user&apos;s current location.
+In order to use this <code>API</code> you need to these permissions in your <code>package.json</code> file</p>
+<pre><code class="lang-text">android.permission.ACCESS_FINE_LOCATION
+android.permission.ACCESS_COARSE_LOCATION
 </code></pre>
-<p>Install Android JS project <code>generator and builder</code></p>
-<pre><code class="lang-sh">npm install -g androidjs-builder
+<p>A working example of <code>Location API</code></p>
+<pre><code class="lang-js">app.location.get();
+</code></pre>
+<h3 id="methods">Methods</h3>
+<h4 id="applocationget"><code>app.location.get()</code></h4>
+<p>returns <code>JSON</code> object with attribute <code>latitude</code>,  <code>longitude</code> and <code>error</code>
+<code>NOTE: returns error message if error = true</code></p>
+<p>An example of above code:</p>
+<pre><code class="lang-js">app.location.get();
 </code></pre>
 
                                 
@@ -592,12 +601,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="sms_api.html" class="navigation navigation-prev " aria-label="Previous page: SMS API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="generating_project.html" class="navigation navigation-next " aria-label="Next page: Generating Project">
+                <a href="app.html" class="navigation navigation-next " aria-label="Next page: App">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -608,7 +617,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.2","depth":1,"next":{"title":"Generating Project","level":"1.3","depth":1,"path":"generating_project.md","ref":"./generating_project.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"installation.md","mtime":"2020-02-22T19:43:46.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T16:49:13.456Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Location API","level":"1.19","depth":1,"next":{"title":"App","level":"1.20","depth":1,"path":"app.md","ref":"./app.md","articles":[]},"previous":{"title":"SMS API","level":"1.18","depth":1,"path":"sms_api.md","ref":"sms_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"location_api.md","mtime":"2020-03-01T16:47:25.813Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T16:49:13.456Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
