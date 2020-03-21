@@ -27,4 +27,5 @@
 - [DeepLink API](deeplink_api.md)
 - [SMS API](sms_api.md)
 - [Location API](location_api.md)
+- [Mobile Data API](mobiledata_api.md)
 - [App](app.md)

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Generating Project · Android JS</title>
+        <title>Mobile Data API · Android JS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="packaging_app.html" />
+    <link rel="next" href="app.html" />
     
     
-    <link rel="prev" href="installation.html" />
+    <link rel="prev" href="location_api.html" />
     
 
 
@@ -131,7 +131,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="generating_project.html">
+        <li class="chapter " data-level="1.3" data-path="generating_project.html">
             
                 <a href="generating_project.html">
             
@@ -500,7 +500,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="mobiledata_api.html">
+        <li class="chapter active" data-level="1.20" data-path="mobiledata_api.html">
             
                 <a href="mobiledata_api.html">
             
@@ -556,7 +556,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Generating Project</a>
+        <a href="." >Mobile Data API</a>
     </h1>
 </div>
 
@@ -571,30 +571,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="generating-project">Generating Project</h1>
-<p><code>Note: In order to generate project make sure you already have androidjs-builder</code></p>
-<p>Android JS enables you to create android applications with pure JavaScript by providing a runtime with rich native (android) APIs. You could see it as a variant of the Node.js runtime that is focused on android applications instead of web servers.</p>
-<pre><code class="lang-sh">androidjs init
-npm install
+                                <h1 id="mobile-data-api">Mobile Data API</h1>
+<p><code>app.mobiledata</code> is an instance of <code>Mobile Data API</code>, which provide functions to access <code>Mobile Data</code> from your app.</p>
+<p>A working example of <code>Mobile Data API</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> status = app.mobiledata.isEnabled();
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Mobile Data status: &quot;</span>, status);
 </code></pre>
-<p>it will ask for <code>APP NAME</code> (i.e. myfirstapp)
-it will generate a sample project inside <code>myfirstapp</code></p>
-<pre><code class="lang-text"> myfirstapp
-    |__ assets
-    |       |__ ipc, css, js
-    |
-    |__ views
-    |       |__ index.html
-    |
-    |__ main.js
-    |__ package.json
+<h3 id="methods">Methods</h3>
+<h4 id="appmobiledataisenabled"><code>app.mobiledata.isEnabled()</code></h4>
+<p>Returns <code>true</code> if <code>Mobile Data</code> is <code>enable</code> otherwise <code>false</code>.</p>
+<p>An example of above code:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(app.mobiledata.isEnabled());
 </code></pre>
-<ul>
-<li><code>main.js</code> is the main file or we can say it is back process of your app which execute all the code written in node, so you have to write all the node js code inside <code>main.js</code></li>
-<li><code>index.html</code> is the first view which is render by app initially</li>
-<li><code>package.json</code> to keep track of all your node packages</li>
-<li><code>assets</code> to store all assets of your app</li>
-</ul>
 
                                 
                                 </section>
@@ -622,12 +610,12 @@ it will generate a sample project inside <code>myfirstapp</code></p>
 
             
                 
-                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                <a href="location_api.html" class="navigation navigation-prev " aria-label="Previous page: Location API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="packaging_app.html" class="navigation navigation-next " aria-label="Next page: Packaging App">
+                <a href="app.html" class="navigation navigation-next " aria-label="Next page: App">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -638,7 +626,7 @@ it will generate a sample project inside <code>myfirstapp</code></p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Generating Project","level":"1.3","depth":1,"next":{"title":"Packaging App","level":"1.4","depth":1,"path":"packaging_app.md","ref":"./packaging_app.md","articles":[]},"previous":{"title":"Installation","level":"1.2","depth":1,"path":"installation.md","ref":"./installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"generating_project.md","mtime":"2020-02-22T19:43:46.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T19:04:27.950Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mobile Data API","level":"1.20","depth":1,"next":{"title":"App","level":"1.21","depth":1,"path":"app.md","ref":"./app.md","articles":[]},"previous":{"title":"Location API","level":"1.19","depth":1,"path":"location_api.md","ref":"location_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"mobiledata_api.md","mtime":"2020-03-21T19:02:24.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-21T19:04:27.950Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
