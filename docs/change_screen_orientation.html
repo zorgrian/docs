@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Getting Started · Android JS</title>
+        <title>Change Screen Orientation · Android JS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -70,10 +70,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="configuring_app.html" />
+    <link rel="next" href="change_theme.html" />
     
     
-    <link rel="prev" href="packaging_app.html" />
+    <link rel="prev" href="configuring_app.html" />
     
 
 
@@ -157,7 +157,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="getting_started.html">
+        <li class="chapter " data-level="1.5" data-path="getting_started.html">
             
                 <a href="getting_started.html">
             
@@ -184,7 +184,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="change_screen_orientation.html">
+        <li class="chapter active" data-level="1.6.1" data-path="change_screen_orientation.html">
             
                 <a href="change_screen_orientation.html">
             
@@ -569,7 +569,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Getting Started</a>
+        <a href="." >Change Screen Orientation</a>
     </h1>
 </div>
 
@@ -584,45 +584,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="getting-started">Getting Started</h1>
-<p>In order to create your first project, first make a directory</p>
-<pre><code class="lang-sh">mkdir myfirstapp
-<span class="hljs-built_in">cd</span> myfirstapp
-npm init
-</code></pre>
-<p>you will get the following </p>
-<pre><code class="lang-text"> myfirstapp
-    |__ package.json
-</code></pre>
-<p>create directory named <code>views</code> and make <code>index.html</code> inside it.</p>
-<pre><code class="lang-sh">mkdir views
-touch index.html
-</code></pre>
-<p>Now you will get the following</p>
-<pre><code class="lang-text"> myfirstapp
-    |__views
-    |     |__index.html
-    |
-    |__ package.json
-</code></pre>
+                                <h1 id="change-screen-orientation">Change Screen Orientation</h1>
+<p>In order to change screen orientation of your app, you need to define <code>screenOrientation</code> attribute in <code>package.json</code> file of your app.</p>
+<h4 id="screen-orientation"><code>Screen Orientation</code></h4>
 <ul>
-<li><code>views</code> is a directory to store all the views of your app</li>
-<li><code>index.html</code> is the first view, render&apos;s initially by app (it is must to create <code>index.html</code> inside the view folder)</li>
-<li>add <code>androidjs.js</code> file in all of your views to access the API&apos;s of <code>Android JS</code> (download <a href="https://github.com/android-js/androidjs/blob/master/build/lib/androidjs.js" target="_blank">here</a>)</li>
+<li><code>screenOrientation: &quot;portrait&quot;</code> to make the orientation <code>portrait</code>.</li>
+<li><code>screenOrientation: &quot;landscape&quot;</code> to make the orientation <code>landscape</code></li>
 </ul>
-<p>create <code>main.js</code> file inside the parent directory</p>
-<pre><code class="lang-sh">touch main.js
+<pre><code class="lang-json">{
+  ...
+  <span class="hljs-string">&quot;screenOrientation&quot;</span>: <span class="hljs-string">&quot;landscape&quot;</span>
+  ...
+}
 </code></pre>
-<p>Now you will get something like this</p>
-<pre><code class="lang-text"> myfirstapp
-    |__views
-    |     |__index.html
-    |__ main.js
-    |__ package.json
-</code></pre>
-<ul>
-<li><code>main.js</code> is the main process of your android app, which will provide the runtime environment for <code>Node Js</code></li>
-</ul>
+<p><code>Note: Bydefault it is in Free Mode</code></p>
 
                                 
                                 </section>
@@ -650,12 +625,12 @@ touch index.html
 
             
                 
-                <a href="packaging_app.html" class="navigation navigation-prev " aria-label="Previous page: Packaging App">
+                <a href="configuring_app.html" class="navigation navigation-prev " aria-label="Previous page: Configuring App">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="configuring_app.html" class="navigation navigation-next " aria-label="Next page: Configuring App">
+                <a href="change_theme.html" class="navigation navigation-next " aria-label="Next page: Change Theme">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -666,7 +641,7 @@ touch index.html
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Started","level":"1.5","depth":1,"next":{"title":"Configuring App","level":"1.6","depth":1,"path":"configuring_app.md","ref":"configuring_app.md","articles":[{"title":"Change Screen Orientation","level":"1.6.1","depth":2,"path":"change_screen_orientation.md","ref":"change_screen_orientation.md","articles":[]},{"title":"Change Theme","level":"1.6.2","depth":2,"path":"change_theme.md","ref":"change_theme.md","articles":[{"title":"Full screen","level":"1.6.2.1","depth":3,"anchor":"#full-screen","path":"change_theme.md","ref":"change_theme.md#full-screen","articles":[]},{"title":"Change colors","level":"1.6.2.2","depth":3,"anchor":"#change-colors","path":"change_theme.md","ref":"change_theme.md#change-colors","articles":[]}]},{"title":"Change the name of your app","level":"1.6.3","depth":2,"anchor":"#change-the-name-of-your-app","path":"configuring_app.md","ref":"configuring_app.md#change-the-name-of-your-app","articles":[]},{"title":"Change the package name of your app","level":"1.6.4","depth":2,"anchor":"#change-the-package-name-of-your-app","path":"configuring_app.md","ref":"configuring_app.md#change-the-package-name-of-your-app","articles":[]},{"title":"Change the icon of your app","level":"1.6.5","depth":2,"anchor":"#change-the-icon-of-your-app","path":"configuring_app.md","ref":"configuring_app.md#change-the-icon-of-your-app","articles":[]},{"title":"Adding permissions to your android app","level":"1.6.6","depth":2,"anchor":"#adding-permissions-to-your-android-app","path":"configuring_app.md","ref":"configuring_app.md#adding-permissions-to-your-android-app","articles":[]},{"title":"Adding output directory","level":"1.6.7","depth":2,"anchor":"#adding-output-directory","path":"configuring_app.md","ref":"configuring_app.md#adding-output-directory","articles":[]},{"title":"Define project type","level":"1.6.8","depth":2,"anchor":"#define-project-type","path":"configuring_app.md","ref":"configuring_app.md#define-project-type","articles":[]}]},"previous":{"title":"Packaging App","level":"1.4","depth":1,"path":"packaging_app.md","ref":"packaging_app.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"getting_started.md","mtime":"2020-02-22T19:43:46.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T21:40:37.545Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Change Screen Orientation","level":"1.6.1","depth":2,"next":{"title":"Change Theme","level":"1.6.2","depth":2,"path":"change_theme.md","ref":"change_theme.md","articles":[{"title":"Full screen","level":"1.6.2.1","depth":3,"anchor":"#full-screen","path":"change_theme.md","ref":"change_theme.md#full-screen","articles":[]},{"title":"Change colors","level":"1.6.2.2","depth":3,"anchor":"#change-colors","path":"change_theme.md","ref":"change_theme.md#change-colors","articles":[]}]},"previous":{"title":"Configuring App","level":"1.6","depth":1,"path":"configuring_app.md","ref":"configuring_app.md","articles":[{"title":"Change Screen Orientation","level":"1.6.1","depth":2,"path":"change_screen_orientation.md","ref":"change_screen_orientation.md","articles":[]},{"title":"Change Theme","level":"1.6.2","depth":2,"path":"change_theme.md","ref":"change_theme.md","articles":[{"title":"Full screen","level":"1.6.2.1","depth":3,"anchor":"#full-screen","path":"change_theme.md","ref":"change_theme.md#full-screen","articles":[]},{"title":"Change colors","level":"1.6.2.2","depth":3,"anchor":"#change-colors","path":"change_theme.md","ref":"change_theme.md#change-colors","articles":[]}]},{"title":"Change the name of your app","level":"1.6.3","depth":2,"anchor":"#change-the-name-of-your-app","path":"configuring_app.md","ref":"configuring_app.md#change-the-name-of-your-app","articles":[]},{"title":"Change the package name of your app","level":"1.6.4","depth":2,"anchor":"#change-the-package-name-of-your-app","path":"configuring_app.md","ref":"configuring_app.md#change-the-package-name-of-your-app","articles":[]},{"title":"Change the icon of your app","level":"1.6.5","depth":2,"anchor":"#change-the-icon-of-your-app","path":"configuring_app.md","ref":"configuring_app.md#change-the-icon-of-your-app","articles":[]},{"title":"Adding permissions to your android app","level":"1.6.6","depth":2,"anchor":"#adding-permissions-to-your-android-app","path":"configuring_app.md","ref":"configuring_app.md#adding-permissions-to-your-android-app","articles":[]},{"title":"Adding output directory","level":"1.6.7","depth":2,"anchor":"#adding-output-directory","path":"configuring_app.md","ref":"configuring_app.md#adding-output-directory","articles":[]},{"title":"Define project type","level":"1.6.8","depth":2,"anchor":"#define-project-type","path":"configuring_app.md","ref":"configuring_app.md#define-project-type","articles":[]}]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"change_screen_orientation.md","mtime":"2020-05-01T21:36:50.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T21:40:37.545Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
