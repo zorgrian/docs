@@ -9,7 +9,6 @@ In order to change the name of your app, you'll have to define `app-name` attrib
 {
   "name": "myfirstapp",
   "app-name" : "My First App",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,7 +27,6 @@ In order to change the **package name** of your app, you'll have to define `pack
   "name": "myfirstapp",
   "app-name" : "My First App",
   "package-name": "myapp",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -41,6 +39,25 @@ In order to change the **package name** of your app, you'll have to define `pack
 
 #### `Change the icon of your app`
 In order to change the **icon** of your app, you'll have to define `icon` attribute in `package.json` file of your app
+
+```json
+{
+  "name": "myfirstapp",
+  "app-name" : "My First App",
+  "package-name": "myapp",
+  "icon":"./assets/icon/icon.png",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+#### `Change the version of your app`
+In order to change the **version** of your app, you'll have to define `version` attribute in `package.json` file of your app
 
 ```json
 {

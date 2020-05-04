@@ -155,6 +155,38 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="packaging_app.html">
+            
+                <a href="packaging_app.html#packaging-app-in-debug-mode">
+            
+                    
+                    Debug Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="packaging_app.html">
+            
+                <a href="packaging_app.html#packaging-app-in-release-mode">
+            
+                    
+                    Release Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.5" data-path="getting_started.html">
@@ -283,6 +315,19 @@
     
         <li class="chapter " data-level="1.6.6" data-path="configuring_app.html">
             
+                <a href="configuring_app.html#change-the-version-of-your-app">
+            
+                    
+                    Change the version of your app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="configuring_app.html">
+            
                 <a href="configuring_app.html#adding-permissions-to-your-android-app">
             
                     
@@ -294,7 +339,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="configuring_app.html">
+        <li class="chapter " data-level="1.6.8" data-path="configuring_app.html">
             
                 <a href="configuring_app.html#adding-output-directory">
             
@@ -307,7 +352,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="configuring_app.html">
+        <li class="chapter " data-level="1.6.9" data-path="configuring_app.html">
             
                 <a href="configuring_app.html#define-project-type">
             
@@ -591,7 +636,6 @@
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;myfirstapp&quot;</span>,
   <span class="hljs-string">&quot;app-name&quot;</span> : <span class="hljs-string">&quot;My First App&quot;</span>,
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
   <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
   <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
   <span class="hljs-string">&quot;scripts&quot;</span>: {
@@ -607,7 +651,6 @@
   <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;myfirstapp&quot;</span>,
   <span class="hljs-string">&quot;app-name&quot;</span> : <span class="hljs-string">&quot;My First App&quot;</span>,
   <span class="hljs-string">&quot;package-name&quot;</span>: <span class="hljs-string">&quot;myapp&quot;</span>,
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
   <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
   <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
   <span class="hljs-string">&quot;scripts&quot;</span>: {
@@ -619,6 +662,22 @@
 </code></pre>
 <h4 id="change-the-icon-of-your-app"><code>Change the icon of your app</code></h4>
 <p>In order to change the <strong>icon</strong> of your app, you&apos;ll have to define <code>icon</code> attribute in <code>package.json</code> file of your app</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;myfirstapp&quot;</span>,
+  <span class="hljs-string">&quot;app-name&quot;</span> : <span class="hljs-string">&quot;My First App&quot;</span>,
+  <span class="hljs-string">&quot;package-name&quot;</span>: <span class="hljs-string">&quot;myapp&quot;</span>,
+  <span class="hljs-string">&quot;icon&quot;</span>:<span class="hljs-string">&quot;./assets/icon/icon.png&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+}
+</code></pre>
+<h4 id="change-the-version-of-your-app"><code>Change the version of your app</code></h4>
+<p>In order to change the <strong>version</strong> of your app, you&apos;ll have to define <code>version</code> attribute in <code>package.json</code> file of your app</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;myfirstapp&quot;</span>,
   <span class="hljs-string">&quot;app-name&quot;</span> : <span class="hljs-string">&quot;My First App&quot;</span>,
@@ -742,7 +801,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configuring App","level":"1.6","depth":1,"next":{"title":"Change Screen Orientation","level":"1.6.1","depth":2,"path":"change_screen_orientation.md","ref":"change_screen_orientation.md","articles":[]},"previous":{"title":"Getting Started","level":"1.5","depth":1,"path":"getting_started.md","ref":"getting_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.2","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"configuring_app.md","mtime":"2020-02-22T19:43:46.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T21:40:37.545Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Configuring App","level":"1.6","depth":1,"next":{"title":"Change Screen Orientation","level":"1.6.1","depth":2,"path":"change_screen_orientation.md","ref":"change_screen_orientation.md","articles":[]},"previous":{"title":"Getting Started","level":"1.5","depth":1,"path":"getting_started.md","ref":"getting_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["variables","related-links","meta","livereload"],"root":"./md","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"meta":{"content":"","data":[{"name":"description","content":"Android JS","extra":""},{"property":"og:title","content":"Android JS Docs"},{"property":"og:description","content":"Android JS a framework for android app development througn Node JS"},{"property":"og:image","content":"https://miro.medium.com/max/400/1*M3Sw2OSCIokYM1pkyPOWOQ.png"},{"property":"og:url","content":"/"}],"name":""},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"variables":{"files":{"package":"../package.json"}},"related-links":{"heading":"### Related links"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Pankaj Devesh <pankajdevesh3@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"package":{"license":"MIT","scripts":{"serve":"gitbook serve ./ ./docs/","build":"gitbook build ./ ./docs/"},"dependencies":{"gitbook-plugin-variables":"^1.1.0"},"keywords":[],"author":"","name":"androidjs","version":"2.0.3","description":"","devDependencies":{}}},"title":"Android JS","gitbook":"*"},"file":{"path":"configuring_app.md","mtime":"2020-05-04T11:30:36.897Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T11:34:35.946Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
