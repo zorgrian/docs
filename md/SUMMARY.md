@@ -8,6 +8,7 @@
 ---
 
 - [Installation](installation.md)
+  - [Update SDK](installation.md#update-sdk)
 - [Generating Project](generating_project.md)
 - [Packaging App](packaging_app.md)
   - [Debug Mode](packaging_app.md#packaging-app-in-debug-mode)

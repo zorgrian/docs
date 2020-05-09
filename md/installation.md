@@ -1,12 +1,16 @@
 # Installation
-To install prebuilt Electron binaries, use `npm`.
+To install prebuilt Android JS library, use `npm`.
 ```sh
-npm install androidjs
+$ npm install androidjs
 ```
 
-Install Android JS project `generator and builder`
+Install Android JS project builder from `npm`.
 ```sh
-npm install -g androidjs-builder
+$ npm install -g androidjs-builder
 ```
 
-
+# Update SDK
+To update androidjs-sdk run the following command.
+```sh
+$ androidjs update
+```

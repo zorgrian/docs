@@ -4,14 +4,14 @@
 
 ## Packaging App In Debug Mode
 ```sh
-cd myfirstapp
-androidjs build
+$ cd myfirstapp
+$ androidjs build
 ```
 
 ## Packaging App In Release Mode
 ```sh
-cd myfirstapp
-androidjs build --release
+$ cd myfirstapp
+$ androidjs build --release
 ```
 
 `NOTE: It will generate apk file inside 'dist' folder`  
@@ -20,5 +20,5 @@ androidjs build --release
 If this `build` command generates any error, try to `build` with `force command`
 
 ```sh
-androidjs build -f
+$ androidjs build -f
 ```

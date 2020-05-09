@@ -1,9 +1,9 @@
 # Getting Started
 In order to create your first project, first make a directory
 ```sh
-mkdir myfirstapp
-cd myfirstapp
-npm init
+$ mkdir myfirstapp
+$ cd myfirstapp
+$ npm init
 ```
 you will get the following 
 
@@ -15,8 +15,8 @@ you will get the following
 create directory named `views` and make `index.html` inside it.
 
 ```sh
-mkdir views
-touch index.html
+$ mkdir views
+$ echo "Hello" > index.html
 ```
 
 Now you will get the following
@@ -34,7 +34,7 @@ Now you will get the following
 create `main.js` file inside the parent directory
 
 ```sh
-touch main.js
+$ echo "const androidjs = require('androidjs').back;" > main.js
 ```
 
 Now you will get something like this

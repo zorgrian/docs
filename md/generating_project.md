@@ -5,8 +5,9 @@
 Android JS enables you to create android applications with pure JavaScript by providing a runtime with rich native (android) APIs. You could see it as a variant of the Node.js runtime that is focused on android applications instead of web servers.
 
 ```sh
-androidjs init
-npm install
+$ androidjs init
+$ cd myfirstapp
+$ npm install
 ```
 it will ask for `APP NAME` (i.e. myfirstapp)
 it will generate a sample project inside `myfirstapp`
